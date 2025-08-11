@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSA Worldwide | Real-Time Customer Support Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fade: "fadeIn 1.5s ease-in forwards",
+                        bounceIn: "bounceIn 0.8s ease-out",
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': {
+                                opacity: 0
+                            },
+                            '100%': {
+                                opacity: 1
+                            }
+                        },
+                        bounceIn: {
+                            '0%': {
+                                transform: 'scale(0.8)',
+                                opacity: 0
+                            },
+                            '100%': {
+                                transform: 'scale(1)',
+                                opacity: 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <nav id="navbar">
+        <ul>
+            <li><a  class="current"href="index.html" target="_self">Home</a></li>
+            <li><a  href="about.html" target="_self">About</a></li>
+            <li><a  href="contact.html" target="_self">Contact</a></li>
+        </ul>
+    </nav>
+   
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white animate-fade">
+        <h1 class="text-5xl md:text-6xl font-extrabold animate-bounceIn drop-shadow-lg">CSA Worldwide</h1>
+        <p class="mt-4 text-xl font-medium">Real-Time Customer Support Analyzer</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="max-w-5xl mx-auto py-12 px-6 animate-fade">
+        <h2 class="text-3xl font-bold mb-4">Mission</h2>
+        <p class="text-lg mb-6">We enhance customer service with AI-driven call analysis, using NVIDIA’s CUDA and Riva for real-time speech processing and Claude API for intelligent response suggestions—reducing resolution time by 50%.</p>
+
+        <h2 class="text-3xl font-bold mb-4">Tech Stack</h2>
+        <ul class="list-disc pl-6 text-lg space-y-2">
+            <li><strong>CUDA:</strong> Accelerates audio preprocessing (3x faster than CPU).</li>
+            <li><strong>NVIDIA Riva:</strong> Enables &lt;200ms speech-to-text conversion.</li>
+            <li><strong>Claude API:</strong> Generates context-aware agent responses.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold mt-10 mb-4">Use Cases</h2>
+        <ul class="list-disc pl-6 text-lg space-y-2">
+            <li><strong>Call Centers:</strong> Auto-generates CRM notes and detects customer sentiment.</li>
+            <li><strong>E-Commerce:</strong> Identifies frustration triggers in real time.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold mt-10 mb-4">Performance</h2>
+        <ul class="list-disc pl-6 text-lg space-y-2">
+            <li>200ms latency</li>
+            <li>90% suggestion accuracy</li>
+            <li>40% shorter calls</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold mt-10 mb-4">Why NVIDIA?</h2>
+        <p class="text-lg">Our solution leverages CUDA, Riva, and Triton Inference Server, demonstrating GPU-accelerated AI for enterprise customer support.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-gray-100 py-12 px-6 animate-fade">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+            <form id="ContactForm" onsubmit="sendEmail(event)" class="space-y-4">
+                <input type="text" id="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg" />
+                <input type="email" id="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg" />
+                <textarea id="message" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg h-32"></textarea>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-transform hover:scale-105">Send</button>
+            </form>
+        </div>
+    </section>
+
+    
+        
+    <!-- Email Script -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+                    $("$contacform").click(function() {
+
+                            name = $("name").val(), email = $("email").val(), message = $("message").val(),
+
+                                $.ajax({
+                                        type: "POST",
+                                        url: "sendmail.php",
+                                        data: "name=" + name,
+                                        "$email=": +email,
+                                        "$message=": +message,
+                                        success: function(html) {
+                                            if (html == 'true') {
+                                                $("$add_err2").html( < div class = "alert-success" > < strong > Message Sent! </strong></div > );
+                                            }
+                                        }
+
+
+                                    }
+                                    )
+                                }
+                    )
+                            }
+                            )
+    </script>
+
+    <footer id="main_footer">
+        <div class="social ">
+            <a href="https://www.instagram.com/uzinvestments_ltd/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/uzoma-nwokorie-59788729/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href="https://wa.me/2348155022552/"><i class="fa-brands fa-whatsapp fa-2x"></i>
+            </a>
+    
+        </div>
+        <p>CSA Worldwide.&copy;2025, All Rights Reserved</p>
+    </footer> 
+</body>
+
+</html>

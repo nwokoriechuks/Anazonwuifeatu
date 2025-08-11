@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+    
+        .carousel-card {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            height: 400px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .carousel-card:hover {
+            transform: scale(1.05);
+        }
+    
+        .carousel-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .carousel-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            font-size: 18px;
+            text-align: center;
+        }
+    
+        /* Founder Hover Popup */
+        .founder-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            padding: 20px;
+            text-align: center;
+            transition: opacity 0.4s ease-in-out;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    
+        .carousel-card:hover .founder-info {
+            opacity: 1;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+    <title>CSA Worldwide | Real-Time Customer Support Analyzer</title>
+    
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a  href="index.html" target="_self">Home</a></li>
+                <li><a class="current" href="about.html">About</a></li>
+                <li><a  href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+<section id="about-info" class="bg-light py-3">
+    <div class="container">
+        <div class="info-left">
+            <section class="max-w-5xl mx-auto py-12 px-6 animate-fade">
+                <h2 class="text-3xl font-bold mb-4">Mission</h2>
+                <p class="text-lg mb-6">We enhance customer service with AI-driven call analysis, using NVIDIA’s CUDA and Riva for real-time speech processing and Claude API for intelligent response suggestions—reducing resolution time by 50%.</p>
+        
+                <h2 class="text-3xl font-bold mb-4">Tech Stack</h2>
+                <ul class="list-disc pl-6 text-lg space-y-2">
+                    <li><strong>CUDA:</strong> Accelerates audio preprocessing (3x faster than CPU).</li>
+                    <li><strong>NVIDIA Riva:</strong> Enables &lt;200ms speech-to-text conversion.</li>
+                    <li><strong>Claude API:</strong> Generates context-aware agent responses.</li>
+                </ul>
+        
+                <h2 class="text-3xl font-bold mt-10 mb-4">Use Cases</h2>
+                <ul class="list-disc pl-6 text-lg space-y-2">
+                    <li><strong>Call Centers:</strong> Auto-generates CRM notes and detects customer sentiment.</li>
+                    <li><strong>E-Commerce:</strong> Identifies frustration triggers in real time.</li>
+                </ul>
+        
+                <h2 class="text-3xl font-bold mt-10 mb-4">Performance</h2>
+                <ul class="list-disc pl-6 text-lg space-y-2">
+                    <li>200ms latency</li>
+                    <li>90% suggestion accuracy</li>
+                    <li>40% shorter calls</li>
+                </ul>
+        
+                <h2 class="text-3xl font-bold mt-10 mb-4">Why NVIDIA?</h2>
+                <p class="text-lg">Our solution leverages CUDA, Riva, and Triton Inference Server, demonstrating GPU-accelerated AI for enterprise customer support.</p>
+            </section>
+        </div>
+    </div>
+</section>
+<div class="clr"></div>
+<section class="carousel-section"class="py-3">
+    <div class="container">
+        <h2 class="l-heading">MEET OUR TEAM LEADS</h2>
+   <!-- Carousel Section -->
+   <h1 style="text-align:center; padding-top:20px;">CSA Worldwide Team</h1>
+
+   <div class="carousel-container">
+       <!-- Founder -->
+       <div class="carousel-card">
+           <img src="ife.png" alt="Founder">
+           <div class="carousel-text">Founder: Ifeatu Anazonwu</div>
+           <div class="founder-info">
+               <p>
+                   Communication isn't just words,<br>
+                   <strong>it's connection.</strong> <br>
+                   I'm building tools to help people <br>
+                   listen deeper, speak clearer,<br>
+                   and understand each other truly.<br>
+                   Because when we communicate with heart, <br>
+                   we build bridges in love, work and life.<br>
+                   <strong>Join me in creating a world where<br>
+                   everyone's voice is heard!</strong>
+               </p>
+           </div>
+       </div>
+   
+       <!-- Co-Founder -->
+       <div class="carousel-card">
+           <img src="chuks.avif" alt="Co-Founder">
+           <div class="carousel-text">Co.Founder: Chinaza Ekepele</div>
+           <div class="founder-info">
+            <p>
+                Communication isn't just words,<br>
+                <strong>it's connection.</strong> <br>
+                I'm building tools to help people <br>
+                listen deeper, speak clearer,<br>
+                and understand each other truly.<br>
+                Because when we communicate with heart, <br>
+                we build bridges in love, work and life.<br>
+                <strong>Join me in creating a world where<br>
+                everyone's voice is heard!</strong>
+            </p>
+        </div>
+       </div>
+   
+       <!-- Developer -->
+       <div class="carousel-card">
+           <img src="chuks.avif" alt="Developer">
+           <div class="carousel-text">Developer: Chukwuma Nwokorie</div>
+           <div class="founder-info">
+            <p>
+                Communication isn't just words,<br>
+                <strong>it's connection.</strong> <br>
+                I'm building tools to help people <br>
+                listen deeper, speak clearer,<br>
+                and understand each other truly.<br>
+                Because when we communicate with heart, <br>
+                we build bridges in love, work and life.<br>
+                <strong>Join me in creating a world where<br>
+                everyone's voice is heard!</strong>
+            </p>
+        </div>
+       </div>
+   </div>
+   
+    </div>
+</section>
+
+<footer id="main_footer">
+    <div class="social ">
+        <a href="https://www.instagram.com/uzinvestments_ltd/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/uzoma-nwokorie-59788729/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        <a href="https://wa.me/2348155022552/"><i class="fa-brands fa-whatsapp fa-2x"></i>
+        </a>
+
+    </div>
+    <p>CSA Worldwide.&copy;2025, All Rights Reserved</p>
+</footer> 
+    
+<script>
+    function startCarousel(id) {
+        const carousel = document.getElementById(id);
+        const inner = carousel.querySelector('.carousel-inner');
+        const items = carousel.querySelectorAll('.carousel-item');
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % items.length;
+            inner.style.transform = `translateX(${-index * 100}%)`;
+        }, 3000);
+    }
+
+    startCarousel('carousel1');
+    startCarousel('carousel2');
+    startCarousel('carousel3');
+</script>
+    
+</body>
+</html>

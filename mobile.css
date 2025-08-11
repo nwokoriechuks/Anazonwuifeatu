@@ -1,0 +1,95 @@
+
+#navbar {
+    background: #444;
+   position: static;
+    width: 100%;
+  
+}
+#navbar .logo {
+    float: none;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#navbar ul, #navbar ul li{
+    float: none;
+}
+
+#navbar ul li a{
+    padding: 5px;
+    border-bottom: 1px solid black;
+    color: white;
+    width: 100%;
+}
+
+
+
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-card {
+        width: 90%;
+        height: auto;
+    }
+
+
+
+/*Home Info*/
+#home-info .info-img{
+    display: none;
+}
+
+#home-info .info-content{
+    float: none;
+    width: 100%;
+    padding: 50px 10px;
+}
+
+
+
+/*BOXES*/
+.box{
+    float:none;
+    width: 100%;
+}
+
+/*ABOUt*/
+#about-info .info-right,
+#about-info .info-left{
+    float:none;
+    width: 100%;
+
+}
+#about-info .info-right{
+    margin-top: 30px;
+}
+.l-heading{
+    text-align: center;
+}
+
+/*SAMPLES*/
+img{
+    max-width: 100%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 350px;
+    margin: auto;
+    gap: 5px;
+}
+
+.sample{
+    width: 70%;
+}
+#main_footer{
+    background-color: #444;
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+}
+#main_footer .social a {
+    color: white;
+    margin: 0 10px;
+}
