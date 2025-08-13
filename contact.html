@@ -12,7 +12,9 @@
     <meta name="viewport" content="width= device-width">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">      
+     <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     <script src="https://cdn.tailwindcss.com"></script>      
      <title>CSA Worldwide | Real-Time Customer Support Analyzer</title>
     
 </head>
@@ -29,32 +31,49 @@
        
     </header>
 
-    <section id="contact-form" class="py-3 ">
+ <!-- Contact Section -->
+ <section class="bg-gray-100 py-12 px-6 animate-fade">
+    <div class="max-w-xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4 text-center">Contact <span>Us</span></h2>
+        <form id="ContactForm" onsubmit="sendEmail(event)" class="space-y-4">
+            <input type="text" id="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg" />
+            <input type="email" id="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg" />
+            <textarea id="message" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg h-32"></textarea>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-transform hover:scale-105">Send</button>
+        </form>
+    </div>
+</section>
 
-        <div class="container">
-            <h1 class="l-heading" style="text-align: center;"><span class="text-primary">Contact</span>Us</h1>
-            <p>Please fill out the form below to contact us</p>
-            <form action="process.php">
-                <div class="contain">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name">
+
     
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message"></textarea>
-                    </div>
-                </div>
-                <a href="mailto:nwokoriechuma@gmail.com"><button type="submit" class="button">Submit</button></a>
-            </form>
-        </div>
-    </section>
+<!-- Email Script -->
+<script type="text/javascript">
+    $(document).ready(function() {
+                $("$contacform").click(function() {
+
+                        name = $("name").val(), email = $("email").val(), message = $("message").val(),
+
+                            $.ajax({
+                                    type: "POST",
+                                    url: "sendmail.php",
+                                    data: "name=" + name,
+                                    "$email=": +email,
+                                    "$message=": +message,
+                                    success: function(html) {
+                                        if (html == 'true') {
+                                            $("$add_err2").html( < div class = "alert-success" > < strong > Message Sent! </strong></div > );
+                                        }
+                                    }
+
+
+                                }
+                                )
+                            }
+                )
+                        }
+                        )
+</script>
+
     <footer id="main_footer">
         <div class="social ">
             <a href="https://www.instagram.com/uzinvestments_ltd/"><i class="fa-brands fa-instagram fa-2x"></i></a>

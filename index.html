@@ -93,49 +93,7 @@
         <p class="text-lg">Our solution leverages CUDA, Riva, and Triton Inference Server, demonstrating GPU-accelerated AI for enterprise customer support.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section class="bg-gray-100 py-12 px-6 animate-fade">
-        <div class="max-w-xl mx-auto">
-            <h2 class="text-2xl font-bold mb-4 text-center">Contact Us</h2>
-            <form id="ContactForm" onsubmit="sendEmail(event)" class="space-y-4">
-                <input type="text" id="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg" />
-                <input type="email" id="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg" />
-                <textarea id="message" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg h-32"></textarea>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-transform hover:scale-105">Send</button>
-            </form>
-        </div>
-    </section>
-
-    
-        
-    <!-- Email Script -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-                    $("$contacform").click(function() {
-
-                            name = $("name").val(), email = $("email").val(), message = $("message").val(),
-
-                                $.ajax({
-                                        type: "POST",
-                                        url: "sendmail.php",
-                                        data: "name=" + name,
-                                        "$email=": +email,
-                                        "$message=": +message,
-                                        success: function(html) {
-                                            if (html == 'true') {
-                                                $("$add_err2").html( < div class = "alert-success" > < strong > Message Sent! </strong></div > );
-                                            }
-                                        }
-
-
-                                    }
-                                    )
-                                }
-                    )
-                            }
-                            )
-    </script>
-
+   
     <footer id="main_footer">
         <div class="social ">
             <a href="https://www.instagram.com/uzinvestments_ltd/"><i class="fa-brands fa-instagram fa-2x"></i></a>

@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Host = 'smtp.elasticemail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'anazonwuifeatu@gmail.com';
-        $mail->Password = '087E783DA18D7766B5FA0FAC12B62D1D4330';
+        $mail->Password = 'A194CBFD5DA8B41F72A622E42842CEB718D9';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 2525;
 
